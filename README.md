@@ -6,8 +6,10 @@ The frame to realize RTDE and the original URScript are from the Internet and no
 Trajectory generator includes 5 algorithms, fosucing on joint space or task space. 
 5 algorithms are written as 'class', which makes it convient to call in other files.
 
-RTDE is embedded in the two files starts with 'min_jerk_xxx.py'. The 'min_jerk_xxx.py' files are to conduct the codes and communicate with the virtual and real robot.
+RTDE is embedded in the two files starts with 'min_jerk_xxx.py'. 
+The 'min_jerk_xxx.py' files are to conduct the codes and communicate with the virtual and real robot.
 The whole thing goes like this: 
-  First users run the 'min_jerk_..._joint.py' or 'min_jerk_..._task.py'. Trajectory are genearting, waiting for data transfer to the robot.
-  Then the it triggers the 'URScrpit.urp' running in the simulator (usually named as URSim) in the virtual machine. Data are received.
-  The code in 'min_jerk_..._joint.py' and 'min_jerk_..._space.py'must correspond with 'URScrpit.urp'.
+
+1. Users run the 'min_jerk_..._joint.py' or 'min_jerk_..._task.py'. Trajectory are genearting, waiting for data transfer to the robot.
+2. The code in 'min_jerk_..._.py' triggers the 'URScrpit.urp' running in the simulator (usually named as URSim) in the virtual machine. Data are received.
+3. The code in 'min_jerk_..._joint.py' and 'min_jerk_..._space.py'must correspond with 'URScrpit.urp'.
